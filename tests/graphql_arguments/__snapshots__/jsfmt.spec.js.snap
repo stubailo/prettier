@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`hello.graphql 1`] = `
+exports[`args.graphql 1`] = `
 {
   short(var: $var, int: 5, float: 5.6, bool: true, string: "hello world!")
   long(var: $thisIsAReallyLongVariableNameRight, int: 52342342342, float: 5.6, bool: true, string: "hello world this is a very long string!")
@@ -13,6 +13,24 @@ exports[`hello.graphql 1`] = `
     float: 5.6,
     bool: true,
     string: "hello world this is a very long string!"
+  )
+}
+
+`;
+
+exports[`lists.graphql 1`] = `
+{
+  shortWithList(list: [1, 2, 3])
+  longWithList(list: ["hello world this is a very long string!","hello world this is a very long string!", "hello world this is a very long string!"])
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{
+  shortWithList(list: [1, 2, 3]) longWithList(
+    list: [
+      "hello world this is a very long string!",
+      "hello world this is a very long string!",
+      "hello world this is a very long string!"
+    ]
   )
 }
 
